@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        Intializing recyclerview
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-
+//      Getting layoutManager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             ));
         }
-
+//      Adding MyData array to adapter to populate the data in CardView
         adapter = new CustomAdapter(data);
         recyclerView.setAdapter(adapter);
     }

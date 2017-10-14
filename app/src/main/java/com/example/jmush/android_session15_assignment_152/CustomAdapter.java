@@ -16,7 +16,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private ArrayList<DataModel> dataSet;
 
-
+//Creating holder class which holds the view
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView textViewName;
@@ -33,7 +33,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         this.dataSet = data;
     }
 
-
+//Getting view from Layout
 
 
     @Override
@@ -43,7 +43,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         return myViewHolder;
     }
-
+// Setting the text values to cardview
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
@@ -53,7 +53,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         textViewVersion.setText(dataSet.get(position).getVersion());
 
     }
-
+// Return size of the list
     @Override
     public int getItemCount() {
         return dataSet.size();
